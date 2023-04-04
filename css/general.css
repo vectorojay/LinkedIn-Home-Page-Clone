@@ -10,7 +10,9 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: whitesmoke;
 }
 
 a {
@@ -22,6 +24,6 @@ li {
 }
 
 .container {
-  max-width: 115rem;
+  max-width: 118rem;
   margin: auto;
 }

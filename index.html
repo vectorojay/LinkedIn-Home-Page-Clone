@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/general.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
     <title>LinkedIn - Home Page Clone</title>
   </head>
   <body>
@@ -20,7 +27,12 @@
                 alt="LinkedIn Logo"
               />
             </div>
-            <input class="search-bar" type="text" name="search-bar" />
+            <input
+              class="search-bar"
+              type="text"
+              name="search-bar"
+              placeholder="Search"
+            />
           </div>
           <ul class="nav-items nav-1">
             <li class="nav-item">
@@ -43,17 +55,60 @@
               <ion-icon class="nav-icon" name="notifications"></ion-icon
               ><a class="nav-link" href="">Notifications</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="">Me</a></li>
+            <li class="nav-item">
+              <div class="nav-icon nav-dp"></div>
+              <a class="nav-link" href="">Me</a>
+            </li>
           </ul>
         </div>
         <div class="nav-right">
           <ul class="nav-items nav-2">
-            <li class="nav-item">For Business</li>
-            <li class="nav-item">Post a job for free</li>
+            <li class="nav-item">
+              <ion-icon class="nav-icon" name="briefcase"></ion-icon>
+              <a class="nav-link" href="">For Business</a>
+            </li>
+            <li class="nav-item">
+              <ion-icon class="nav-icon" name="home"></ion-icon>
+              <a class="nav-link" href="">Post a job for free</a>
+            </li>
           </ul>
         </div>
       </nav>
     </header>
+
+    <main>
+      <section class="main-section container">
+        <div class="main-section-box">
+          <aside class="profile-display">
+            <div class="inner">
+              <div class="dp-box">
+                <div class="cover-img-box">
+                  <img src="images/cover-img.jpg" alt="" />
+                </div>
+                <div class="aside-dp">
+                  <img src="images/dp.jpg" alt="" />
+                </div>
+              </div>
+              <div class="title-details">
+                <h2 class="title-details-name">Prince Ojukwu</h2>
+                <p class="title-details-impressions">
+                  <span>58 </span> profile views
+                </p>
+                <p class="title-details-impressions">
+                  <span>118</span> post impressions
+                </p>
+              </div>
+            </div>
+          </aside>
+          <div class="home-feed">
+            <div class="inner"></div>
+          </div>
+          <aside class="recommendations">
+            <div class="inner"></div>
+          </aside>
+        </div>
+      </section>
+    </main>
 
     <script
       type="module"
