@@ -43,6 +43,7 @@ header {
 }
 
 .nav-item {
+  cursor: pointer;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -153,6 +154,11 @@ header {
   overflow: hidden;
 }
 
+.post-inner {
+  height: calc(300vh - 284vh);
+  margin-bottom: 1rem;
+}
+
 .dp-box {
   height: 13%;
 }
@@ -164,32 +170,46 @@ header {
   /* border-radius: 8px; */
 }
 
-.aside-dp {
+.aside-dp,
+.post-dp {
   display: inline-block;
-  height: 7rem;
-  width: 7rem;
+
   background-color: blue;
   border-radius: 50%;
   border: 2px solid #fff;
+}
+
+.aside-dp {
   transform: translate(30%, -50%);
+  height: 7rem;
+  width: 7rem;
+}
+
+.post-dp {
+  height: 5.5rem;
+  width: 5.5rem;
 }
 
 .aside-dp img,
+.post-dp img,
 .cover-img-box img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.aside-dp img {
+.aside-dp img,
+.post-dp img {
   border-radius: 50%;
 }
 
-.title-details {
+/* .title-details, */
+.title-details div {
   display: grid;
   gap: 1.6rem;
-  padding-left: 1.4rem;
-  margin-top: 4.8rem;
+  padding: 3rem 0 2rem 0;
+  margin: 1.4rem;
+  border-bottom: 1px solid #77777722;
   /* font-size: 1.8rem; */
 }
 
@@ -205,8 +225,75 @@ header {
 }
 
 .title-details-impressions span {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: bolder;
   color: #000;
   letter-spacing: 0.2px;
+}
+
+.post-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.post-input {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  width: 85%;
+
+  margin: auto;
+  border-radius: 50px;
+  border: 1px solid #999;
+}
+
+.post-input:hover {
+  background-color: whitesmoke;
+}
+
+.post-input span {
+  margin-left: 2rem;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  color: #777;
+  word-spacing: 1px;
+}
+
+.post-icons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  height: 4rem;
+  width: 95%;
+  margin: auto;
+}
+
+.post-icons-container div {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  height: 100%;
+  width: 25%;
+  border-radius: 5px;
+}
+
+.post-icons-container div:hover {
+  background-color: whitesmoke;
+}
+
+.post-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #0072b1;
+}
+
+.post-icon-text {
+  white-space: nowrap;
 }
