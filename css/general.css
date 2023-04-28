@@ -39,3 +39,28 @@ li {
 .orange {
   color: orange;
 }
+
+/* FLEX */
+.dis-flex {
+  display: flex;
+}
+
+/* ALIGN ITEMS CENTER */
+.align-ctr {
+  align-items: center;
+}
+
+/* JUSTIFY CONTENT SPACE BETWEEN */
+.justify-cont-sp-btwn {
+  justify-content: space-between;
+}
+
+/* GAPS */
+
+.gap-sm {
+  gap: 0.5rem;
+}
+
+.gap-md {
+  gap: 1rem;
+}

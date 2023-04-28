@@ -43,16 +43,47 @@ header {
 }
 
 .nav-item {
+  position: relative;
   cursor: pointer;
   display: grid;
   align-items: center;
   justify-items: center;
 }
 
+.nav-item:hover .nav-icon {
+  color: #000;
+}
+
+.nav-item:hover .nav-link {
+  color: #000;
+}
+
 .nav-icon {
   height: 2.4rem;
   width: 2.4rem;
   color: #666;
+}
+
+.nav-icon-sm {
+  height: 1.4rem;
+  width: 1.4rem;
+}
+
+.notification {
+  position: absolute;
+  top: -0.3rem;
+  right: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  font-size: 1.2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #fff;
+  background-color: #cc1016;
+  border-radius: 50%;
 }
 
 .logo-search-box {
@@ -72,9 +103,13 @@ header {
   width: 100%;
   object-fit: cover;
 }
-.nav-1,
-.nav-2 {
+.nav-1 {
   gap: 2.8rem;
+}
+
+.nav-2 {
+  justify-content: start;
+  padding-left: 1rem;
 }
 
 .nav-link {
@@ -100,6 +135,13 @@ header {
   background-color: red;
 }
 
+.nav-dp img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .nav-right {
   height: 100%;
   /* border-left: 2px solid black; */
@@ -116,42 +158,70 @@ header {
   /* position: fixed;
   top: 0; */
   display: grid;
-  grid-template-columns: 1.3fr 3fr 1.8fr;
+  grid-template-columns: 1.3fr 3fr 1.7fr;
 }
 
 .profile-display {
-  height: 70vh;
+  height: 78vh;
   width: 100%;
-  padding: 8rem 1rem 3rem;
+  padding: 8rem 1rem 2.5rem;
   /* background-color: red; */
   position: sticky;
   top: 0;
 }
 
 .home-feed {
-  height: 300vh;
+  /* height: 100vh; */
   width: 100%;
   /* background-color: blue; */
   padding: 8rem 1rem 3rem;
 }
 
+.sort-by-box {
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.sort-by-box div {
+  margin-right: 1rem;
+  height: 0.1rem;
+  width: 83%;
+  background-color: #77777744;
+}
+
+.sort-by-box p {
+  color: #777;
+}
+
+strong {
+  margin: 0 0.5rem;
+  color: #000;
+}
+
 .recommendations {
   position: sticky;
-  top: 0;
-  height: 30vh;
+  top: -405px;
+  display: grid;
+  gap: 2rem;
+  height: 100vh;
   width: 100%;
   padding: 8rem 1rem 3rem;
   /* background-color: yellow; */
 }
 
 .inner {
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   background-color: white;
   border: 1px solid #77777733;
   border-radius: 8px;
 
   overflow: hidden;
+}
+
+.profile-inner {
+  height: 100%;
 }
 
 .post-inner {
@@ -180,12 +250,17 @@ header {
 }
 
 .aside-dp {
-  transform: translate(30%, -50%);
   height: 7rem;
   width: 7rem;
 }
 
-.post-dp {
+.aside-dp {
+  transform: translate(30%, -50%);
+}
+
+.post-dp,
+.recommendations-dp,
+.feed-dp {
   height: 5.5rem;
   width: 5.5rem;
 }
@@ -199,29 +274,58 @@ header {
 }
 
 .aside-dp img,
-.post-dp img {
+.post-dp img,
+.feed-dp img {
   border-radius: 50%;
 }
 
+.feed-dp img {
+  height: 100%;
+}
+
+.display {
+  display: grid;
+}
 /* .title-details, */
-.title-details div {
+.title-details-container {
   display: grid;
   gap: 1.6rem;
-  padding: 3rem 0 2rem 0;
-  margin: 1.4rem;
+  padding: 5rem 0 2rem 0;
+  /* margin: 1.4rem; */
   border-bottom: 1px solid #77777722;
   /* font-size: 1.8rem; */
 }
 
+/* .title-detail-box {
+} */
+
+.title-detail-box:hover {
+  background-color: whitesmoke;
+}
+
 .title-details-name {
+  cursor: pointer;
   font-size: 2.2rem;
   letter-spacing: 0.6px;
+
+  margin-left: 1.4rem;
+}
+
+.title-details-name:hover {
+  background-color: whitesmoke;
 }
 
 .title-details-impressions {
+  cursor: pointer;
   font-size: 1.4rem;
   color: #777;
   letter-spacing: 0.2px;
+  margin-left: 1.4rem;
+  padding: 1rem 0;
+}
+
+.title-details-impressions:hover {
+  background-color: whitesmoke;
 }
 
 .title-details-impressions span {
@@ -297,3 +401,348 @@ header {
 .post-icon-text {
   white-space: nowrap;
 }
+
+.groups-events {
+  display: grid;
+  align-items: center;
+  gap: 3rem;
+  font-size: 1.7rem;
+  color: #777;
+  padding: 1.7rem 0;
+  /* justify-content: center; */
+  height: 12rem;
+  border-bottom: 1px solid #77777722;
+}
+
+.groups-events div {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.groups-events div :hover {
+  background-color: whitesmoke;
+}
+
+.groups-events-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.group-event {
+  padding-left: 1.4rem;
+}
+
+.profile-cta {
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #777;
+  padding: 2rem;
+}
+
+.profile-cta p {
+  font-size: 1.5rem;
+}
+
+.premium-free {
+  cursor: pointer;
+  margin-top: 1rem;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.premium-free p {
+  margin-left: 0.5rem;
+  font-weight: bolder;
+  color: #000;
+}
+
+.premium-free-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: orange;
+}
+
+.recommendations-inner {
+  height: 48vh;
+  padding: 1rem 2rem;
+}
+
+.recommendations-add-feed {
+  font-size: 1.7rem;
+  margin-bottom: 1.8rem;
+}
+
+.recommendations-icon {
+  color: #777;
+}
+
+.recommendations-dp img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.recommendations-text-box {
+  gap: 1.4rem;
+  margin-top: 1.2rem;
+}
+
+.recommendations-main-text {
+  cursor: pointer;
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  color: #444;
+  letter-spacing: 0.3px;
+}
+
+.recommendations-sub-text {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.rec-follow-text-box {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  color: #777;
+
+  margin-top: 1rem;
+  padding: 0.5rem 1.3rem;
+  border: 1.5px solid #777;
+  border-radius: 50px;
+}
+
+.rec-follow-text-box:hover {
+  background-color: whitesmoke;
+  /* border: 1.7px inset #777; */
+}
+
+.recommendations-view-all {
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #666;
+  margin: 2rem 1rem;
+}
+
+.view-all-icon {
+  margin-left: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.see-whos-hiring img {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.dot {
+  height: 0.3rem;
+  width: 0.3rem;
+  background-color: #777;
+  border-radius: 50%;
+}
+.status-indicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: green;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.feed-inner {
+  margin-top: 1rem;
+  /* height: 100vh; */
+}
+
+.feed-dp {
+  position: relative;
+}
+
+.line {
+  height: 0.1rem;
+  width: 95%;
+  background-color: #77777722;
+  margin: auto;
+}
+
+.feed-profile {
+  padding: 2rem;
+  gap: 0.7rem;
+}
+
+.feed-profile-summary {
+  width: 100%;
+}
+
+.feed-profile-summary h3 {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.feed-profile-summary h3:hover {
+  text-decoration: underline;
+  color: #0072b1;
+}
+
+.feed-profile-summary span {
+  font-size: 1.4rem;
+  color: #777;
+}
+
+.feed-profile-summary p {
+  font-size: 1.3rem;
+  color: #777;
+}
+
+.feed-icon {
+  height: 1.8rem;
+  width: 1.8rem;
+  color: #777;
+}
+
+.post {
+  display: grid;
+  padding: 0 2rem;
+}
+
+.post p {
+  font-size: 1.5rem;
+}
+
+.post span {
+  cursor: pointer;
+  font-size: 1.4rem;
+  justify-self: end;
+  color: #777;
+}
+
+.post span:hover {
+  text-decoration: underline;
+  color: #0072b1;
+}
+
+.post-img {
+  margin-top: 1rem;
+}
+
+.post-img img {
+  height: 100%;
+  width: 100%;
+}
+
+.likes-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.4rem;
+}
+
+.likes-box span {
+  font-size: 1.3rem;
+  color: #777;
+}
+
+.like-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.4rem;
+  width: 1.4rem;
+  background-color: #0072b1;
+  border-radius: 50%;
+  margin-left: -6px;
+}
+
+.heart-box {
+  background-color: orangered;
+}
+
+.like-icon,
+.heart {
+  color: whitesmoke;
+}
+
+.post-actions-box {
+  padding: 1rem 4rem;
+  justify-content: space-between;
+}
+
+.post-actions-box p {
+  font-size: 1.5rem;
+  color: #777;
+  font-weight: bolder;
+}
+
+.post-actions-box div {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.post-actions-box div:hover {
+  background-color: whitesmoke;
+}
+
+.post-action-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #777;
+}
+
+.recommendations-link-box {
+  display: grid;
+  gap: 1rem;
+}
+
+.recommendations-link {
+  justify-content: center;
+  font-size: 1.2rem;
+  gap: 2rem;
+}
+
+.recommendations-link a {
+  text-decoration: none;
+  color: #777;
+}
+
+.recommendations-link a:hover {
+  color: #0072b1;
+  text-decoration: underline;
+}
+
+.rec-span {
+  font-size: 1.5rem;
+  color: #0072b1;
+  font-weight: bolder;
+}
+
+.rec-logo {
+  height: 1.7rem;
+  width: 1.7rem;
+  object-fit: cover;
+  margin-right: 0.3rem;
+}
+
+/* .feed-dp {
+  height: 3rem;
+  width: 3rem;
+}
+
+.feed-dp img {
+  height: 100%;
+  width: 100%;
+} */

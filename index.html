@@ -54,10 +54,15 @@
             <li class="nav-item">
               <ion-icon class="nav-icon" name="notifications"></ion-icon
               ><a class="nav-link" href="">Notifications</a>
+              <div class="notification"><span>1</span></div>
             </li>
             <li class="nav-item">
-              <div class="nav-icon nav-dp"></div>
-              <a class="nav-link" href="">Me</a>
+              <div class="nav-icon nav-dp">
+                <img src="images/dp.jpg" alt="" />
+              </div>
+              <a class="nav-link dis-flex align-ctr" href=""
+                >Me<ion-icon class="nav-icon-sm" name="caret-down"></ion-icon
+              ></a>
             </li>
           </ul>
         </div>
@@ -65,7 +70,12 @@
           <ul class="nav-items nav-2">
             <li class="nav-item">
               <ion-icon class="nav-icon" name="apps"></ion-icon>
-              <a class="nav-link" href="">For Business</a>
+              <a class="nav-link dis-flex align-ctr" href=""
+                >For Business<ion-icon
+                  class="nav-icon-sm"
+                  name="caret-down"
+                ></ion-icon
+              ></a>
             </li>
             <li class="nav-item">
               <ion-icon class="nav-icon" name="bag"></ion-icon>
@@ -80,7 +90,7 @@
       <section class="main-section container">
         <div class="main-section-box">
           <aside class="profile-display">
-            <div class="inner">
+            <div class="inner profile-inner">
               <div class="dp-box">
                 <div class="cover-img-box">
                   <img src="images/cover-img.jpg" alt="" />
@@ -89,20 +99,64 @@
                   <img src="images/dp.jpg" alt="" />
                 </div>
               </div>
-              <div class="title-details">
-                <div>
-                  <h2 class="title-details-name">Prince Ojukwu</h2>
-                  <p class="title-details-impressions">
-                    <span>58 </span> profile views
-                  </p>
-                  <p class="title-details-impressions">
-                    <span>118</span> post impressions
-                  </p>
-                </div>
-              </div>
 
-              <div class=""></div>
-              <!-- <hr style="width: 87%; margin: 2rem auto; color: #77777726" /> -->
+              <div class="display">
+                <div class="title-details">
+                  <div class="title-details-container">
+                    <div class="title-detail-box">
+                      <h2 class="title-details-name">Prince Ojukwu</h2>
+                    </div>
+                    <div>
+                      <div class="title-detail-box">
+                        <p class="title-details-impressions">
+                          <span>58 </span> profile views
+                        </p>
+                      </div>
+                      <div class="title-detail-box">
+                        <p class="title-details-impressions">
+                          <span>118</span> post impressions
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="groups-events">
+                    <div>
+                      <div class="group-event">
+                        <ion-icon
+                          class="groups-events-icon"
+                          name="people"
+                        ></ion-icon>
+                        <p>Groups</p>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="group-event">
+                        <ion-icon
+                          class="groups-events-icon"
+                          name="calendar"
+                        ></ion-icon>
+                        <p>Events</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="profile-cta">
+                    <p>
+                      Access exclusive tools & <br />
+                      insights
+                    </p>
+                    <div class="premium-free">
+                      <ion-icon
+                        class="premium-free-icon"
+                        name="square"
+                      ></ion-icon>
+                      <p>Try Premium for free</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- <hr style="width: 87%; margin: 2rem auto; color: #77777726" /> -->
+              </div>
             </div>
           </aside>
           <div class="home-feed">
@@ -128,22 +182,689 @@
                   <p class="post-icon-text">Video</p>
                 </div>
                 <div>
-                  <ion-icon class="post-icon brown" name="calendar"></ion-icon>
+                  <ion-icon class="post-icon orange" name="calendar"></ion-icon>
                   <p class="post-icon-text">Event</p>
                 </div>
                 <div>
                   <ion-icon
-                    class="post-icon orange"
+                    class="post-icon brown"
                     name="document-text"
                   ></ion-icon>
                   <p class="post-icon-text">Write article</p>
                 </div>
               </div>
             </div>
-            <div class="inner"></div>
+            <div class="sort-by-box dis-flex align-ctr">
+              <div></div>
+              <p class="dis-flex align-ctr">
+                Sort By: <strong>Top</strong>
+                <ion-icon class="nav-icon-sm" name="caret-down"></ion-icon>
+              </p>
+            </div>
+            <div class="inner feed-inner">
+              <div class="feed-profile dis-flex">
+                <div class="feed-dp">
+                  <img src="images/favour-badu.jpeg" alt="" />
+                  <div class="status-indicator"></div>
+                </div>
+                <div class="feed-profile-summary">
+                  <div class="dis-flex align-ctr justify-cont-sp-btwn">
+                    <div class="dis-flex align-ctr gap-sm">
+                      <h3>Favour Badu</h3>
+                      <div class="dot"></div>
+                      <span>1st</span>
+                    </div>
+                    <div>
+                      <ion-icon
+                        class="feed-icon"
+                        name="ellipsis-horizontal"
+                      ></ion-icon>
+                    </div>
+                  </div>
+                  <div>
+                    <p>
+                      Techy VA | UI/ UX Designer | Visual Designer |
+                      Branding/Marketing Expert
+                    </p>
+                  </div>
+                  <div class="dis-flex align-ctr gap-sm">
+                    <span>2d</span>
+                    <div class="dot"></div>
+                    <ion-icon class="feed-icon" name="earth"></ion-icon>
+                  </div>
+                </div>
+              </div>
+              <div class="post"><p>Day 27</p></div>
+              <div class="post"><span>...see more</span></div>
+              <div class="post-img">
+                <img src="images/favour-post.jpeg" alt="" />
+              </div>
+
+              <div class="likes-box">
+                <div class="dis-flex align-ctr gap-sm">
+                  <div class="like-icon-box">
+                    <ion-icon class="like-icon" name="thumbs-up"></ion-icon>
+                  </div>
+                  <span>Favour Badu and 7 others</span>
+                </div>
+              </div>
+
+              <div class="line"></div>
+
+              <div class="post-actions-box dis-flex">
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon
+                    class="post-action-icon"
+                    name="thumbs-up-outline"
+                  ></ion-icon>
+                  <p>Like</p>
+                </div>
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon
+                    class="post-action-icon"
+                    name="chatbox-ellipses-outline"
+                  ></ion-icon>
+                  <p>Comment</p>
+                </div>
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon
+                    class="post-action-icon"
+                    name="repeat-outline"
+                  ></ion-icon>
+                  <p>Repost</p>
+                </div>
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon class="post-action-icon" name="send"></ion-icon>
+                  <p>Share</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="inner feed-inner">
+              <div class="feed-profile dis-flex">
+                <div class="feed-dp">
+                  <img src="images/daniel-dp.jpeg" alt="" />
+                  <div class="status-indicator"></div>
+                </div>
+                <div class="feed-profile-summary">
+                  <div class="dis-flex align-ctr justify-cont-sp-btwn">
+                    <div class="dis-flex align-ctr gap-sm">
+                      <h3>Daniel Funmilayo</h3>
+                      <div class="dot"></div>
+                      <span>1st</span>
+                    </div>
+                    <div>
+                      <ion-icon
+                        class="feed-icon"
+                        name="ellipsis-horizontal"
+                      ></ion-icon>
+                    </div>
+                  </div>
+                  <div>
+                    <p>
+                      Software Front-end Developer specializing in React | Next
+                      Js
+                    </p>
+                  </div>
+                  <div class="dis-flex align-ctr gap-sm">
+                    <span>2w</span>
+                    <div class="dot"></div>
+                    <ion-icon class="feed-icon" name="earth"></ion-icon>
+                  </div>
+                </div>
+              </div>
+              <div class="post">
+                <p>
+                  It all began approximately a year ago when I attended a Tech
+                  zoom call out of desperation for a new job.
+                </p>
+              </div>
+              <div class="post"><span>...see more</span></div>
+              <div class="post-img">
+                <img src="images/daniel-post.jpeg" alt="" />
+              </div>
+
+              <div class="likes-box">
+                <div class="dis-flex gap-sm">
+                  <div class="like-icon-box">
+                    <ion-icon class="like-icon" name="thumbs-up"></ion-icon>
+                  </div>
+                  <span>You and 557 others</span>
+                </div>
+
+                <div class="comments-box dis-flex align-ctr gap-sm">
+                  <span>27 comments</span>
+                  <div class="dot"></div>
+                  <span>13 reposts</span>
+                </div>
+              </div>
+
+              <div class="line"></div>
+
+              <div class="post-actions-box dis-flex">
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon
+                    class="post-action-icon"
+                    name="thumbs-up-outline"
+                  ></ion-icon>
+                  <p>Like</p>
+                </div>
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon
+                    class="post-action-icon"
+                    name="chatbox-ellipses-outline"
+                  ></ion-icon>
+                  <p>Comment</p>
+                </div>
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon
+                    class="post-action-icon"
+                    name="repeat-outline"
+                  ></ion-icon>
+                  <p>Repost</p>
+                </div>
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon class="post-action-icon" name="send"></ion-icon>
+                  <p>Share</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="inner feed-inner">
+              <div class="feed-profile dis-flex">
+                <div class="feed-dp">
+                  <img src="images/adebayo-dp.jpeg" alt="" />
+                  <div class="status-indicator"></div>
+                </div>
+                <div class="feed-profile-summary">
+                  <div class="dis-flex align-ctr justify-cont-sp-btwn">
+                    <div class="dis-flex align-ctr gap-sm">
+                      <h3>Adebayo Chike Odurinde</h3>
+                      <div class="dot"></div>
+                      <span>Following</span>
+                    </div>
+                    <div>
+                      <ion-icon
+                        class="feed-icon"
+                        name="ellipsis-horizontal"
+                      ></ion-icon>
+                    </div>
+                  </div>
+                  <div>
+                    <p>
+                      UI/UX Designer || Web Developer || WordPress Expert ||
+                      Email Automation Specialis
+                    </p>
+                  </div>
+                  <div class="dis-flex align-ctr gap-sm">
+                    <span>3h</span>
+                    <div class="dot"></div>
+                    <ion-icon class="feed-icon" name="earth"></ion-icon>
+                  </div>
+                </div>
+              </div>
+              <div class="post">
+                <p>
+                  What was your first plan for your career? What do you do now?
+                  It's okay to be unhappy with your current job and look for
+                  something else.
+                </p>
+              </div>
+              <div class="post"><span>...see more</span></div>
+              <div class="post-img">
+                <img src="images/adebayo-post.jpeg" alt="" />
+              </div>
+
+              <div class="likes-box">
+                <div class="dis-flex gap-sm">
+                  <div class="like-icon-box">
+                    <ion-icon class="like-icon" name="thumbs-up"></ion-icon>
+                  </div>
+                  <div class="like-icon-box heart-box">
+                    <ion-icon class="like-icon heart" name="heart"></ion-icon>
+                  </div>
+
+                  <span>5</span>
+                </div>
+
+                <div class="comments-box dis-flex align-ctr gap-sm">
+                  <span>27 comments</span>
+                  <div class="dot"></div>
+                  <span>13 reposts</span>
+                </div>
+              </div>
+
+              <div class="line"></div>
+
+              <div class="post-actions-box dis-flex">
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon
+                    class="post-action-icon"
+                    name="thumbs-up-outline"
+                  ></ion-icon>
+                  <p>Like</p>
+                </div>
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon
+                    class="post-action-icon"
+                    name="chatbox-ellipses-outline"
+                  ></ion-icon>
+                  <p>Comment</p>
+                </div>
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon
+                    class="post-action-icon"
+                    name="repeat-outline"
+                  ></ion-icon>
+                  <p>Repost</p>
+                </div>
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon class="post-action-icon" name="send"></ion-icon>
+                  <p>Share</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="inner feed-inner">
+              <div class="feed-profile dis-flex">
+                <div class="feed-dp">
+                  <img src="images/ram.jpeg" alt="" />
+                  <div class="status-indicator"></div>
+                </div>
+                <div class="feed-profile-summary">
+                  <div class="dis-flex align-ctr justify-cont-sp-btwn">
+                    <div class="dis-flex align-ctr gap-sm">
+                      <h3>Ram Maheshwari ⚡</h3>
+                      <div class="dot"></div>
+                      <span>Following</span>
+                    </div>
+                    <div>
+                      <ion-icon
+                        class="feed-icon"
+                        name="ellipsis-horizontal"
+                      ></ion-icon>
+                    </div>
+                  </div>
+                  <div>
+                    <p>
+                      32k+ @Linkedin | Programming Content Creator 👨‍💻 | Frontend
+                      Web Developer | HTM...
+                    </p>
+                  </div>
+                  <div class="dis-flex align-ctr gap-sm">
+                    <span>10h</span>
+                    <div class="dot"></div>
+                    <ion-icon class="feed-icon" name="earth"></ion-icon>
+                  </div>
+                </div>
+              </div>
+              <div class="post">
+                <p>
+                  #jsQuizByRam - Can you pick the correct output of the
+                  JavaScript Code? 🤔 React with the Linkedin Reaction that you
+                  think is right between 💡/❤️
+                </p>
+              </div>
+              <div class="post"><span>...see more</span></div>
+              <div class="post-img">
+                <img src="images/ram-post.gif" alt="" />
+              </div>
+
+              <div class="likes-box">
+                <div class="dis-flex gap-sm">
+                  <div class="like-icon-box">
+                    <ion-icon class="like-icon" name="thumbs-up"></ion-icon>
+                  </div>
+                  <div class="like-icon-box heart-box">
+                    <ion-icon class="like-icon heart" name="heart"></ion-icon>
+                  </div>
+
+                  <span>302</span>
+                </div>
+
+                <div class="comments-box dis-flex align-ctr gap-sm">
+                  <span>34 comments</span>
+                  <div class="dot"></div>
+                  <span>2 reposts</span>
+                </div>
+              </div>
+
+              <div class="line"></div>
+
+              <div class="post-actions-box dis-flex">
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon
+                    class="post-action-icon"
+                    name="thumbs-up-outline"
+                  ></ion-icon>
+                  <p>Like</p>
+                </div>
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon
+                    class="post-action-icon"
+                    name="chatbox-ellipses-outline"
+                  ></ion-icon>
+                  <p>Comment</p>
+                </div>
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon
+                    class="post-action-icon"
+                    name="repeat-outline"
+                  ></ion-icon>
+                  <p>Repost</p>
+                </div>
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon class="post-action-icon" name="send"></ion-icon>
+                  <p>Share</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="inner feed-inner">
+              <div class="feed-profile dis-flex">
+                <div class="feed-dp">
+                  <img src="images/Franklin-dp.jpeg" alt="" />
+                  <div class="status-indicator"></div>
+                </div>
+                <div class="feed-profile-summary">
+                  <div class="dis-flex align-ctr justify-cont-sp-btwn">
+                    <div class="dis-flex align-ctr gap-sm">
+                      <h3>Franklin Tochukwu</h3>
+                      <div class="dot"></div>
+                      <span>1st</span>
+                    </div>
+                    <div>
+                      <ion-icon
+                        class="feed-icon"
+                        name="ellipsis-horizontal"
+                      ></ion-icon>
+                    </div>
+                  </div>
+                  <div>
+                    <p>
+                      Full Stack Engineer || React || Vue || PHP || Node ||
+                      Express || SQL || MongoDB || Alpine
+                    </p>
+                  </div>
+                  <div class="dis-flex align-ctr gap-sm">
+                    <span>13h</span>
+                    <div class="dot"></div>
+                    <ion-icon class="feed-icon" name="earth"></ion-icon>
+                  </div>
+                </div>
+              </div>
+              <div class="post">
+                <p>
+                  If you use GPT, you should be smiling at this <br />
+                  <br />
+                  Look up "Prompt Engineering" and read a full case study about
+                  it
+                </p>
+              </div>
+              <div class="post"><span>...see more</span></div>
+              <div class="post-img">
+                <img src="images/Adebanjo-post.jpeg" alt="" />
+              </div>
+
+              <div class="likes-box">
+                <div class="dis-flex gap-sm">
+                  <div class="like-icon-box">
+                    <ion-icon class="like-icon" name="thumbs-up"></ion-icon>
+                  </div>
+
+                  <span>Adebanjo Israel and 2 others</span>
+                </div>
+
+                <div class="comments-box dis-flex align-ctr gap-sm">
+                  <span>2 comments</span>
+                </div>
+              </div>
+
+              <div class="line"></div>
+
+              <div class="post-actions-box dis-flex">
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon
+                    class="post-action-icon"
+                    name="thumbs-up-outline"
+                  ></ion-icon>
+                  <p>Like</p>
+                </div>
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon
+                    class="post-action-icon"
+                    name="chatbox-ellipses-outline"
+                  ></ion-icon>
+                  <p>Comment</p>
+                </div>
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon
+                    class="post-action-icon"
+                    name="repeat-outline"
+                  ></ion-icon>
+                  <p>Repost</p>
+                </div>
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon class="post-action-icon" name="send"></ion-icon>
+                  <p>Share</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="inner feed-inner">
+              <div class="feed-profile dis-flex">
+                <div class="feed-dp">
+                  <img src="images/nimmo-dp.jpeg" alt="" />
+                  <div class="status-indicator"></div>
+                </div>
+                <div class="feed-profile-summary">
+                  <div class="dis-flex align-ctr justify-cont-sp-btwn">
+                    <div class="dis-flex align-ctr gap-sm">
+                      <h3>Nimmo Ismaila</h3>
+                      <div class="dot"></div>
+                      <span>2nd</span>
+                    </div>
+                    <div>
+                      <ion-icon
+                        class="feed-icon"
+                        name="ellipsis-horizontal"
+                      ></ion-icon>
+                    </div>
+                  </div>
+                  <div>
+                    <p>
+                      Frontend Developer||Expert in ReactJs, NextJs, Material
+                      UI, Typescript
+                    </p>
+                  </div>
+                  <div class="dis-flex align-ctr gap-sm">
+                    <span>1w</span>
+                    <div class="dot"></div>
+                    <ion-icon class="feed-icon" name="earth"></ion-icon>
+                  </div>
+                </div>
+              </div>
+              <div class="post">
+                <p>
+                  I recently had a conversation with a fellow developer about
+                  testing frontend code, and it reminded me of just how crucial
+                  it is to have effective testing in place. As a frontend
+                  developer, I have learned the hard way that code testing is
+                  abs...
+                </p>
+              </div>
+              <div class="post"><span>...see more</span></div>
+              <div class="post-img">
+                <img src="images/nimmo-post.jpeg" alt="" />
+              </div>
+
+              <div class="likes-box">
+                <div class="dis-flex gap-sm">
+                  <div class="like-icon-box">
+                    <ion-icon class="like-icon" name="thumbs-up"></ion-icon>
+                  </div>
+                  <div class="like-icon-box heart-box">
+                    <ion-icon class="like-icon heart" name="heart"></ion-icon>
+                  </div>
+
+                  <span>Zainab Sanni and 55 others</span>
+                </div>
+
+                <div class="comments-box dis-flex align-ctr gap-sm">
+                  <span>9 comments</span>
+                  <div class="dot"></div>
+                  <span>6 reposts</span>
+                </div>
+              </div>
+
+              <div class="line"></div>
+
+              <div class="post-actions-box dis-flex">
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon
+                    class="post-action-icon"
+                    name="thumbs-up-outline"
+                  ></ion-icon>
+                  <p>Like</p>
+                </div>
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon
+                    class="post-action-icon"
+                    name="chatbox-ellipses-outline"
+                  ></ion-icon>
+                  <p>Comment</p>
+                </div>
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon
+                    class="post-action-icon"
+                    name="repeat-outline"
+                  ></ion-icon>
+                  <p>Repost</p>
+                </div>
+                <div class="dis-flex align-ctr gap-sm">
+                  <ion-icon class="post-action-icon" name="send"></ion-icon>
+                  <p>Share</p>
+                </div>
+              </div>
+            </div>
           </div>
           <aside class="recommendations">
-            <div class="inner"></div>
+            <div class="inner recommendations-inner">
+              <div
+                class="recommendations-add-feed dis-flex align-ctr justify-cont-sp-btwn"
+              >
+                <p>Add to your feed</p>
+                <ion-icon
+                  class="recommendations-icon"
+                  name="information-circle"
+                ></ion-icon>
+              </div>
+              <div>
+                <div class="recommendations-text-box dis-flex">
+                  <div class="recommendations-dp">
+                    <img src="images/rec-3.jpeg" alt="" />
+                  </div>
+                  <div>
+                    <h2 class="recommendations-main-text">Kunstmuseum Basel</h2>
+                    <p class="recommendations-sub-text">
+                      Company • Museums and Institutions
+                    </p>
+                    <div class="rec-follow-text-box">
+                      <span class="dis-flex align-ctr"
+                        ><ion-icon name="add"></ion-icon>Follow</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="recommendations-text-box dis-flex">
+                  <div class="recommendations-dp">
+                    <img src="images/rec-2.jpeg" alt="" />
+                  </div>
+                  <div>
+                    <h2 class="recommendations-main-text">
+                      La Grande Course du Grand Paris
+                    </h2>
+                    <p class="recommendations-sub-text">
+                      Company • Museums and Institutions
+                    </p>
+                    <div class="rec-follow-text-box">
+                      <span class="dis-flex align-ctr"
+                        ><ion-icon name="add"></ion-icon>Follow</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="recommendations-text-box dis-flex">
+                  <div class="recommendations-dp">
+                    <img src="images/rec-1.jpeg" alt="" />
+                  </div>
+                  <div>
+                    <h2 class="recommendations-main-text">
+                      Museum für Gestaltung Zürich
+                    </h2>
+                    <p class="recommendations-sub-text">
+                      Company • Museums and Institutions
+                    </p>
+                    <div class="rec-follow-text-box">
+                      <span class="dis-flex align-ctr"
+                        ><ion-icon name="add"></ion-icon>Follow</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="recommendations-view-all">
+                <p class="dis-flex align-ctr">
+                  View all recommendations<ion-icon
+                    class="view-all-icon"
+                    name="arrow-forward-outline"
+                  ></ion-icon>
+                </p>
+              </div>
+            </div>
+            <div class="see-whos-hiring">
+              <img src="images/rec-4.png" alt="" />
+            </div>
+            <div class="recommendations-link-box">
+              <div class="recommendations-link dis-flex">
+                <a href="">About</a>
+                <a href="">Accessibility</a>
+                <a href="">Help Center</a>
+              </div>
+              <div class="recommendations-link dis-flex">
+                <a class="dis-flex align-ctr gap-sm" href=""
+                  >Privacy & Terms
+                  <ion-icon name="caret-down-outline"></ion-icon
+                ></a>
+                <a href="">Ad Choices</a>
+              </div>
+              <div class="recommendations-link dis-flex">
+                <a href="">Advertising</a>
+                <a class="dis-flex align-ctr gap-sm" href=""
+                  >Business Services
+                  <ion-icon name="caret-down-outline"></ion-icon
+                ></a>
+              </div>
+              <div class="recommendations-link dis-flex">
+                <a href="">Get the LinkedIn app</a>
+                <a href="">More</a>
+              </div>
+
+              <div class="recommendations-link dis-flex">
+                <p class="dis-flex align-ctr">
+                  <span class="rec-span">LinkedIn</span>
+                  <img
+                    class="rec-logo"
+                    src="images/linkedin-logo-png-1.png"
+                    alt="LinkedIn Logo"
+                  />LinkedIn Corporation © 2023
+                </p>
+              </div>
+            </div>
           </aside>
         </div>
       </section>
